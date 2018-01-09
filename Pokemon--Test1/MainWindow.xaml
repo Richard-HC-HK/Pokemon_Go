@@ -1,0 +1,136 @@
+﻿<Window x:Class="Pokemon__Test1.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Title="MainWindow" Height="800" Width="1000">
+    <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition></ColumnDefinition>
+            <ColumnDefinition></ColumnDefinition>
+            <ColumnDefinition></ColumnDefinition>
+        </Grid.ColumnDefinitions>
+
+        <Grid.RowDefinitions>
+            <RowDefinition Height="299*"></RowDefinition>
+            <RowDefinition Height="186*"></RowDefinition>
+
+        </Grid.RowDefinitions>
+
+        <Grid Name="gridMap" Grid.Row="0" Grid.Column="0" Grid.ColumnSpan="2" Loaded="gridMap_Loaded" Height="475" VerticalAlignment="Top">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition></ColumnDefinition>
+                <ColumnDefinition></ColumnDefinition>
+                <ColumnDefinition></ColumnDefinition>
+                <ColumnDefinition></ColumnDefinition>
+                <ColumnDefinition></ColumnDefinition>
+                <ColumnDefinition></ColumnDefinition>
+                <ColumnDefinition></ColumnDefinition>
+                <ColumnDefinition></ColumnDefinition>
+                <ColumnDefinition></ColumnDefinition>
+                <ColumnDefinition></ColumnDefinition>
+                <ColumnDefinition></ColumnDefinition>
+                <ColumnDefinition></ColumnDefinition>
+            </Grid.ColumnDefinitions>
+
+            <Grid.RowDefinitions>
+                <RowDefinition></RowDefinition>
+                <RowDefinition></RowDefinition>
+                <RowDefinition></RowDefinition>
+                <RowDefinition></RowDefinition>
+                <RowDefinition></RowDefinition>
+                <RowDefinition></RowDefinition>
+                <RowDefinition></RowDefinition>
+                <RowDefinition></RowDefinition>
+                <RowDefinition></RowDefinition>
+                <RowDefinition></RowDefinition>
+                <RowDefinition></RowDefinition>
+                <RowDefinition></RowDefinition>
+            </Grid.RowDefinitions>
+
+        </Grid>
+
+        <Grid Grid.Row="1">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="0*"/>
+                <RowDefinition/>
+            </Grid.RowDefinitions>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="8*"/>
+                <ColumnDefinition Width="323*"/>
+            </Grid.ColumnDefinitions>
+
+            <Image x:Name="ball1img"  HorizontalAlignment="Left" Height="111" Margin="17,51,0,0" VerticalAlignment="Top" Width="112" RenderTransformOrigin="0.5,0.5" Grid.Column="1" Grid.RowSpan="2">
+                <Image.RenderTransform>
+                    <TransformGroup>
+                        <ScaleTransform ScaleX="-1"/>
+                        <SkewTransform/>
+                        <RotateTransform/>
+                        <TranslateTransform/>
+                    </TransformGroup>
+                </Image.RenderTransform>
+            </Image>
+            <TextBlock x:Name="NameBox1" HorizontalAlignment="Left" Height="20" Margin="198,54,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="105" Grid.Column="1" Grid.RowSpan="2"/>
+            <TextBlock x:Name="typebox1" HorizontalAlignment="Left" Margin="198,24,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="105" Grid.Column="1" Grid.RowSpan="2"/>
+            <TextBlock x:Name="HPBox1" HorizontalAlignment="Left" Margin="198,87,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Height="20" Width="105" RenderTransformOrigin="0.47,0.491" Grid.Column="1" Grid.RowSpan="2"/>
+            <TextBlock x:Name="CPBox1" HorizontalAlignment="Left" Margin="198,119,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="105" Height="20" Grid.Column="1" Grid.RowSpan="2"/>
+            <TextBlock x:Name="ExpBox1" HorizontalAlignment="Left" Height="20" Margin="198,144,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="105" Grid.Column="1" Grid.RowSpan="2"/>
+            <Button x:Name="EvolveBnt1" Content="Evolve" HorizontalAlignment="Left" Margin="146,171,0,0" VerticalAlignment="Top" Width="105" Height="26" Grid.Column="1" Grid.RowSpan="2" Click="EvolveButtonBall1_Click"/>
+            <Button x:Name="LvlupBnt1" Content="Lvlup" HorizontalAlignment="Left" Height="25" Margin="147,211,0,0" VerticalAlignment="Top" Width="104" Grid.Column="1" Grid.RowSpan="2" Click="LevelupButtonBall1_Click"/>
+            <TextBlock x:Name="Typeblock1" HorizontalAlignment="Left" Height="16" Margin="147,24,0,0" TextWrapping="Wrap" Text="Type" VerticalAlignment="Top" Width="32" RenderTransformOrigin="0.457,1.062" Grid.Column="1" Grid.RowSpan="2"/>
+            <TextBlock x:Name="NameBlock1" HorizontalAlignment="Left" Height="18" Margin="146,54,0,0" TextWrapping="Wrap" Text="Name" VerticalAlignment="Top" Width="33" Grid.Column="1" Grid.RowSpan="2"/>
+            <TextBlock x:Name="HPBlock1" HorizontalAlignment="Left" Height="17" Margin="147,87,0,0" TextWrapping="Wrap" Text="HP" VerticalAlignment="Top" Width="32" Grid.Column="1" Grid.RowSpan="2"/>
+            <TextBlock x:Name="CPBlock1" HorizontalAlignment="Left" Height="20" Margin="147,119,0,0" TextWrapping="Wrap" Text="CP" VerticalAlignment="Top" Width="32" Grid.Column="1" Grid.RowSpan="2"/>
+            <TextBlock x:Name="ExpBlock1" HorizontalAlignment="Left" Height="22" Margin="146,144,0,0" TextWrapping="Wrap" Text="Exp" VerticalAlignment="Top" Width="35" Grid.Column="1" Grid.RowSpan="2" RenderTransformOrigin="0.514,0.818"/>
+            <TextBlock x:Name="PokemonBall1" HorizontalAlignment="Left" Height="30" Margin="38,10,0,0" Grid.Row="1" TextWrapping="Wrap" Text="PokenmonBall1" VerticalAlignment="Top" Width="104"/>
+            <Button x:Name="CheckSkillBnt1" Content="Check Skill" Grid.Column="1" HorizontalAlignment="Left" Height="23" Margin="146,251,0,0" Grid.RowSpan="2" VerticalAlignment="Top" Width="105" Click="CheckSkillBntBall1_Click"/>
+        </Grid>
+        <Button x:Name="StartGameButton" Content="Start" Grid.Column="2" HorizontalAlignment="Left" Height="32" Margin="114,200,0,0" VerticalAlignment="Top" Width="108" Click="StartGameButton_Click" RenderTransformOrigin="0.556,0.281"/>
+        <Button x:Name="bnt1" Content="Up" Grid.Column="2" HorizontalAlignment="Left" Height="50" Margin="144,291,0,0" VerticalAlignment="Top" Width="50" Click="bnt1_Click"/>
+        <Button x:Name="bnt2" Content="Left" Grid.Column="2" HorizontalAlignment="Left" Height="50" Margin="78,353,0,0" VerticalAlignment="Top" Width="50" Click="bnt2_Click"/>
+        <Button x:Name="bnt4" Content="Right" Grid.Column="2" HorizontalAlignment="Left" Height="50" Margin="211,353,0,0" VerticalAlignment="Top" Width="50" Click="bnt4_Click"/>
+        <Button x:Name="bnt3" Content="Down" Grid.Column="2" HorizontalAlignment="Left" Height="50" Margin="146,415,0,0" VerticalAlignment="Top" Width="50" Click="bnt3_Click"/>
+        <TextBox x:Name="typingbox" Grid.Column="2" HorizontalAlignment="Left" Height="72" Margin="100,112,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="144" TextChanged="typingbox_TextChanged"/>
+        <TextBlock x:Name="referencebox" Grid.Column="2" HorizontalAlignment="Left" Height="71" Margin="100,21,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="144"/>
+        <Image x:Name="ball2img" Grid.Column="1" HorizontalAlignment="Left" Height="120" Margin="25,27,0,0" Grid.Row="1" VerticalAlignment="Top" Width="109"/>
+        <TextBlock x:Name="Typeblock2" Grid.Column="1" HorizontalAlignment="Left" Height="17" Margin="147,24,0,0" Grid.Row="1" TextWrapping="Wrap" VerticalAlignment="Top" Width="32" Text="Type"/>
+        <TextBlock x:Name="NameBlock2" Grid.Column="1" HorizontalAlignment="Left" Margin="147,55,0,0" Grid.Row="1" TextWrapping="Wrap" Text="Name" VerticalAlignment="Top"/>
+        <TextBlock x:Name="HPBlock2" Grid.Column="1" HorizontalAlignment="Left" Height="16" Margin="147,88,0,0" Grid.Row="1" TextWrapping="Wrap" Text="HP" VerticalAlignment="Top" Width="30"/>
+        <TextBlock x:Name="CPBlock2" Grid.Column="1" HorizontalAlignment="Left" Height="13" Margin="147,117,0,0" Grid.Row="1" TextWrapping="Wrap" VerticalAlignment="Top" Width="32" Text="CP"/>
+        <TextBlock x:Name="ExpBlock2" Grid.Column="1" HorizontalAlignment="Left" Height="16" Margin="146,143,0,0" Grid.Row="1" TextWrapping="Wrap" VerticalAlignment="Top" Width="31" Text="Exp"/>
+        <Button x:Name="EvolveBnt2" Content="Evolve" Grid.Column="1" HorizontalAlignment="Left" Height="22" Margin="146,173,0,0" Grid.Row="1" VerticalAlignment="Top" Width="108" Click="EvolveButtonBall2_Click"/>
+        <Button x:Name="LvlupBnt2" Content="Lvlup" Grid.Column="1" HorizontalAlignment="Left" Margin="146,211,0,0" Grid.Row="1" VerticalAlignment="Top" Width="107" Click="LevelupButtonBall2_Click"/>
+        <Button x:Name="CheckSkillBnt2" Content="Check Skill" Grid.Column="1" HorizontalAlignment="Left" Margin="147,249,0,0" Grid.Row="1" VerticalAlignment="Top" Width="106" Click="CheckSkillBntBall2_Click"/>
+        <Image x:Name="ball3img" Grid.Column="2" HorizontalAlignment="Left" Height="120" Margin="19,27,0,0" Grid.Row="1" VerticalAlignment="Top" Width="109"/>
+        <TextBlock x:Name="Typeblock3" Grid.Column="2" HorizontalAlignment="Left" Height="17" Margin="146,24,0,0" Grid.Row="1" TextWrapping="Wrap" Text="Type" VerticalAlignment="Top" Width="30"/>
+        <TextBlock x:Name="NameBlock3" Grid.Column="2" HorizontalAlignment="Left" Height="16" Margin="146,55,0,0" Grid.Row="1" TextWrapping="Wrap" Text="Name" VerticalAlignment="Top" Width="34" RenderTransformOrigin="0.5,0.5">
+            <TextBlock.RenderTransform>
+                <TransformGroup>
+                    <ScaleTransform/>
+                    <SkewTransform/>
+                    <RotateTransform Angle="3.558"/>
+                    <TranslateTransform/>
+                </TransformGroup>
+            </TextBlock.RenderTransform>
+        </TextBlock>
+        <TextBlock x:Name="HPBlock3" Grid.Column="2" HorizontalAlignment="Left" Height="16" Margin="146,88,0,0" Grid.Row="1" TextWrapping="Wrap" Text="HP" VerticalAlignment="Top" Width="30"/>
+        <TextBlock x:Name="CPBlock3" Grid.Column="2" HorizontalAlignment="Left" Height="13" Margin="146,118,0,0" Grid.Row="1" TextWrapping="Wrap" Text="CP" VerticalAlignment="Top" Width="30"/>
+        <TextBlock x:Name="ExpBlock3" Grid.Column="2" HorizontalAlignment="Left" Height="17" Margin="144,142,0,0" Grid.Row="1" TextWrapping="Wrap" Text="Exp" VerticalAlignment="Top" Width="32"/>
+        <Button x:Name="EvolveBnt3" Content="Evolve" Grid.Column="2" HorizontalAlignment="Left" Height="22" Margin="144,173,0,0" Grid.Row="1" VerticalAlignment="Top" Width="117" Click="EvolveButtonBall3_Click"/>
+        <Button x:Name="LvlupBnt3" Content="Lvlup" Grid.Column="2" HorizontalAlignment="Left" Height="22" Margin="146,211,0,0" Grid.Row="1" VerticalAlignment="Top" Width="115" RenderTransformOrigin="0.53,0.848" Click="LevelupButtonBall3_Click"/>
+        <Button x:Name="CheckSkillBnt3" Content="Check Skill" Grid.Column="2" HorizontalAlignment="Left" Height="22" Margin="146,249,0,0" Grid.Row="1" VerticalAlignment="Top" Width="115" Click="CheckSkillBntBall3_Click"/>
+        <TextBlock x:Name="typebox3" Grid.Column="2" HorizontalAlignment="Left" Height="17" Margin="189,24,0,0" Grid.Row="1" TextWrapping="Wrap" VerticalAlignment="Top" Width="104" FontSize="16"/>
+        <TextBlock x:Name="NameBox3" Grid.Column="2" HorizontalAlignment="Left" Height="16" Margin="189,55,0,0" Grid.Row="1" TextWrapping="Wrap" VerticalAlignment="Top" Width="96"/>
+        <TextBlock x:Name="HPBox3" Grid.Column="2" HorizontalAlignment="Left" Height="17" Margin="189,92,0,0" Grid.Row="1" TextWrapping="Wrap" VerticalAlignment="Top" Width="104"/>
+        <TextBlock x:Name="CPBox3" Grid.Column="2" HorizontalAlignment="Left" Height="14" Margin="189,118,0,0" Grid.Row="1" TextWrapping="Wrap" VerticalAlignment="Top" Width="104"/>
+        <TextBlock x:Name="ExpBox3" Grid.Column="2" HorizontalAlignment="Left" Height="17" Margin="189,140,0,0" Grid.Row="1" TextWrapping="Wrap" VerticalAlignment="Top" Width="104"/>
+        <TextBlock x:Name="typebox2" Grid.Column="1" HorizontalAlignment="Left" Height="17" Margin="199,27,0,0" Grid.Row="1" TextWrapping="Wrap" VerticalAlignment="Top" Width="116"/>
+        <TextBlock x:Name="NameBox2" Grid.Column="1" HorizontalAlignment="Left" Height="17" Margin="199,55,0,0" Grid.Row="1" TextWrapping="Wrap" VerticalAlignment="Top" Width="116"/>
+        <TextBlock x:Name="HPBox2" Grid.Column="1" HorizontalAlignment="Left" Height="13" Margin="199,92,0,0" Grid.Row="1" TextWrapping="Wrap" VerticalAlignment="Top" Width="116"/>
+        <TextBlock x:Name="CPBox2" Grid.Column="1" HorizontalAlignment="Left" Height="16" Margin="199,117,0,0" Grid.Row="1" TextWrapping="Wrap" VerticalAlignment="Top" Width="116"/>
+        <TextBlock x:Name="ExpBox2" Grid.Column="1" HorizontalAlignment="Left" Height="15" Margin="199,142,0,0" Grid.Row="1" TextWrapping="Wrap" VerticalAlignment="Top" Width="116"/>
+        <Button x:Name="StopCatchingBnt" Content="Stop Catching" Grid.Column="2" HorizontalAlignment="Left" Height="25" Margin="88,251,0,0" VerticalAlignment="Top" Width="156" Click="StopCatchingBnt_Click"/>
+        <Button x:Name="TipsBnt" Content="O" Grid.Column="2" HorizontalAlignment="Left" Height="33" Margin="155,362,0,0" VerticalAlignment="Top" Width="30" FontSize="16" Click="CheckTips_Click"/>
+
+
+
+    </Grid>
+</Window>
